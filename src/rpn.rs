@@ -140,7 +140,7 @@ mod tests {
         s.push(Elt::Int(1)).unwrap();
         s.push(Elt::Bool(false)).unwrap();
 
-        let res = s.eval(Op::Add);
+        let res = s.eval(Op::Eq);
         assert!(res.is_err());
         if let Err(Error::Type) = res { } else { assert!(false); }
     }
